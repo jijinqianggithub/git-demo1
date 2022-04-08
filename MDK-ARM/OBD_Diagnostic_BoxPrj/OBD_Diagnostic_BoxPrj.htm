@@ -3,7 +3,7 @@
 <title>Static Call Graph - [OBD_Diagnostic_BoxPrj\OBD_Diagnostic_BoxPrj.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image OBD_Diagnostic_BoxPrj\OBD_Diagnostic_BoxPrj.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri Apr 08 10:07:07 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Fri Apr 08 14:07:24 2022
 <BR><P>
 <H3>Maximum Stack Usage =       1992 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -19,8 +19,8 @@ Mutually Recursive functions
  <LI><a href="#[ed]">rbWrite</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[ed]">rbWrite</a><BR>
  <LI><a href="#[d5]">UART_EndRxTransfer</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[d5]">UART_EndRxTransfer</a><BR>
  <LI><a href="#[5]">UsageFault_Handler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[5]">UsageFault_Handler</a><BR>
- <LI><a href="#[11c]">mem_cmp</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[11c]">mem_cmp</a><BR>
  <LI><a href="#[7b]">rbRead</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[7b]">rbRead</a><BR>
+ <LI><a href="#[11c]">mem_cmp</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[11c]">mem_cmp</a><BR>
  <LI><a href="#[101]">UART_EndTxTransfer</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[101]">UART_EndTxTransfer</a><BR>
 </UL>
 <P>
@@ -476,14 +476,14 @@ Global Symbols
 <P><STRONG><a name="[73]"></a>APP_Update_Recieve</STRONG> (Thumb, 272 bytes, Stack size 1168 bytes, app_looplist.o(i.APP_Update_Recieve))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1984<LI>Call Chain = APP_Update_Recieve &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_next &rArr; create_chain &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mount
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_close
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbRead
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCreate
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanWrite
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rbCanRead
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_close
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mount
 <LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
@@ -1643,7 +1643,6 @@ Global Symbols
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dec_lock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Update_Recieve
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[75]"></a>f_mount</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, ff.o(i.f_mount))
@@ -1655,7 +1654,6 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FATFS_Init
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Update_Recieve
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[77]"></a>f_open</STRONG> (Thumb, 538 bytes, Stack size 608 bytes, ff.o(i.f_open))
@@ -1680,7 +1678,6 @@ Global Symbols
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_read
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Update_Recieve
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[123]"></a>f_sync</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, ff.o(i.f_sync))
@@ -1710,7 +1707,6 @@ Global Symbols
 <LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;disk_read
 </UL>
 <BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;APP_Update_Recieve
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[114]"></a>ff_convert</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, cc936.o(i.ff_convert))
@@ -1738,14 +1734,10 @@ Global Symbols
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_sync
 </UL>
 
-<P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 360 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 170 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 1992<LI>Call Chain = main &rArr; APP_Update_Recieve &rArr; f_open &rArr; dir_register &rArr; dir_find &rArr; dir_next &rArr; create_chain &rArr; put_fat &rArr; move_window &rArr; sync_window &rArr; disk_write
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_write
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_open
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_mount
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;f_close
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FATFS_Init
+<BR>[Calls]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_FATFS_Init
 <LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Receive_IT
 <LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriority
 <LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_EnableIRQ

@@ -33,7 +33,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define DEBUG
-#define APP
+//#define APP
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
